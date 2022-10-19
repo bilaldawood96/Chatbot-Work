@@ -9,7 +9,7 @@
 <body>
     <h1>Calculator</h1>
 
-    <h2>Addition</h2>
+    <h2>Addition, Substrct & Multiple</h2>
 
 
     <Form onsubmit="Add(); return false">
@@ -19,23 +19,39 @@
         Number-2: <input type="text" id="Number-2">
         <br>
         <br>
-        <button type="submit">Submit</button>
+
+        <select name="Calculator" id="selector">
+            <option value="Addition">Addition.</option>
+            <option value="Substract">Substract</option>
+            <option value="Multiple"> Multiple</option>
+            </select>
+    
+        <button type="submit">Submit</button> 
     </Form>
 
-<h3 id="additions""></h3>
+
+<h2 id="additions""></h2>
+<h2 id="sub"></h2>
+<h2 id="multiple"></h2>
 
 <script>
 
 function Add (){
+
 let num1 = +document.getElementById("Number-1").value;
 let num2 = +document.getElementById("Number-2").value;
 let result = num1 + num2
+let result1 = num1 - num2
+let result2 = num1 * num2
+
 document.getElementById("additions").innerHTML = result
+document.getElementById("sub").innerHTML = result1
+document.getElementById("multiple").innerHTML = result2
 }
 
 
+ </script>
 
-</script>
 
 </body>
 </html>
