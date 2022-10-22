@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <h2>Addition, Substrct & Multiple</h2>
+
+
+    <form  onsubmit="event.preventDefault(); calculation();">
+        Number-1: <input type="text" id="Number-1">
+        Number-2: <input type="text" id="Number-2">
+
+        <select name="Calculator" id="selector">
+            <option value="Addition">Addition.</option>
+            <option value="Substract">Substract</option>
+                    </select>
+    
+        <button type="submit">Submit</button> 
+    </Form>
+
+
+<h2 id="Addition""></h2>
+<h2 id="sub"></h2>
+
+
+<script>
+
+function Add (){
+
+let num1 = +document.getElementById("Number-1").value;
+let num2 = +document.getElementById("Number-2").value;
+let result = num1 + num2
+document.getElementById("Addition").innerHTML = result
+}
+
+function sub (){
+
+let num1 = +document.getElementById("Number-1").value;
+let num2 = +document.getElementById("Number-2").value;
+let result = num1 - num2
+document.getElementById("sub").innerHTML = result
+}
+
+
+function calculation(){
+    let num1 = +document.getElementById("Number-1").value;
+    let num2 = +document.getElementById("Number-2").value;
+    var selectedvalue = document.getElementById("selector").value
+    if (selectedvalue == "Addition"){
+        Add();}
+    else if(selectedvalue == "Substract")
+    sub ()
+        }
+
+
+ </script>
+
+
+</body>
+</html>

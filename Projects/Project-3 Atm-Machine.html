@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Bilal Bank</title>
+    <html>
+</head>
+
+<h1>Bilal Bank</h1>
+
+
+<body>
+    
+<form onsubmit="checkpin(); return false;">
+Pin Code: <input type="text" id="pin" required>
+<br> <br>
+<button>Submit</button>
+
+</form>
+<h4 id="displayresult"></h4>
+<h3 id = "homescreen"> </h3>
+
+<script>
+
+let atmbalance = 30000;
+let cardlimit = 25000;
+let accountbalance = 50000;
+
+
+function checkpin ()
+{let pin = document.querySelector("#pin").value;
+
+if (pin.length < 4)
+    {document.querySelector("#displayresult").innerHTML = 
+    "Please Enter 4 Digit Pin"}
+
+else if (pin.length > 4)
+    {document.querySelector("#displayresult").innerHTML = 
+    "Please Enter 4 Digit Pin"}
+
+else if (pin === "1234")
+    {document.querySelector("#displayresult").innerHTML = 
+    "Successfully✅"}
+
+else if (pin >= 4)
+    {document.querySelector("#displayresult").innerHTML = 
+    "Wrong Pin❌"}
+
+}
+
+
+</script>
+</body>
+</html>
