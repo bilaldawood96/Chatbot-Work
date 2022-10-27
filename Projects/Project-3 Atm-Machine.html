@@ -18,9 +18,8 @@ Pin Code: <input type="text" id="pin" required>
 <br> <br>
 <button>Submit</button>
 
-</form>
 <h4 id="displayresult"></h4>
-<h3 id = "homescreen"> </h3>
+
 
 <script>
 
@@ -42,7 +41,16 @@ else if (pin.length > 4)
 
 else if (pin === "1234")
     {document.querySelector("#displayresult").innerHTML = 
-    "Successfully✅"}
+    "Successfully✅";
+
+
+    
+    }
+
+
+   
+
+    
 
 else if (pin >= 4)
     {document.querySelector("#displayresult").innerHTML = 
