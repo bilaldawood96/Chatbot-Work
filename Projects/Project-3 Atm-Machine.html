@@ -13,50 +13,116 @@
 
 <body>
     
-<form onsubmit="checkpin(); return false;">
-Pin Code: <input type="text" id="pin" required>
-<br> <br>
-<button>Submit</button>
-
-<h4 id="displayresult"></h4>
-
-
-<script>
-
-let atmbalance = 30000;
-let cardlimit = 25000;
-let accountbalance = 50000;
-
-
-function checkpin ()
-{let pin = document.querySelector("#pin").value;
-
-if (pin.length < 4)
-    {document.querySelector("#displayresult").innerHTML = 
-    "Please Enter 4 Digit Pin"}
-
-else if (pin.length > 4)
-    {document.querySelector("#displayresult").innerHTML = 
-    "Please Enter 4 Digit Pin"}
-
-else if (pin === "1234")
-    {document.querySelector("#displayresult").innerHTML = 
-    "Successfully✅";
-
-
+    <form onsubmit="checkpin(); return false;">
+        Pin Code: <input type="text" id="pin" required>
+        <br> <br>
+        <button>Submit</button>
+        </form>
     
-    }
-
-
-   
-
+        <h4 id="displayresult"></h4>
+        <div id="homescreen"></div>
+        <h3 id="withdrawAmountscreen"></h3>
+        
+                     
+        <script>
     
+          //Pin Regarding//
+          
+          function checkpin() {
+            let pin = document.querySelector("#pin").value;
+            if (pin.length < 4) {
+              document.querySelector("#displayresult").innerHTML = "Please Enter 4 Digit Pin"
+            }
+            else if (pin.length > 4) {
+              document.querySelector("#displayresult").innerHTML = "Please Enter 4 Digit Pin"
+            }
+            if (pin === "1234") {
+              document.querySelector("#displayresult").innerHTML = "Successfully✅";
+        
+              return document.querySelector("#homescreen").innerHTML =
+              `</br>
+               </br>
+              <form onsubmit="withdraw(); return false;">
+                Enter your Amount: <input type="text" id="inputamount" required>
+                <button type="submit">withdraw</button>
+                </form>
+                <ui>
+                <li id="atmbalance"></li>
+                </br>
+                <li id="cardlimit"></li>
+                </br>
+                <li id="accountbalance"></li>
+                </br>
+                </ui> `
+        
+    
+            } else {
+              document.querySelector("#displayresult").innerHTML =
+                "Wrong Pin❌"
+            }
+        
+    
+          }
+    
+          let atmbalance = 100000;
+          let cardlimit = 25000;
+          let accountbalance = 50000;
+          
+     
+          function withdraw() {
+            let amount = document.querySelector("#inputamount").value;
+                
+            if (amount > atmbalance) {
+            document.querySelector("#withdrawAmountscreen").innerHTML =
+            `ATM Dont have Money`
+            return;
+        
+           }
 
-else if (pin >= 4)
-    {document.querySelector("#displayresult").innerHTML = 
-    "Wrong Pin❌"}
+            if (amount > cardlimit) {
+            document.querySelector("#withdrawAmountscreen").innerHTML =
+            `Daily card limit is Rs.25000`
+           
+            }
 
-}
+            if (amount > cardlimit) {
+            document.querySelector("#withdrawAmountscreen").innerHTML =
+            `Daily card limit is Rs.25000`
+           
+            }
+            
+            if (amount % 500 ) {
+            document.querySelector("#withdrawAmountscreen").innerHTML =
+            `Enter 500,1000,2000,5000 Multiple`
+            return;}
+
+
+            if (amount < cardlimit && atmbalance ) {
+            document.querySelector("#withdrawAmountscreen").innerHTML =
+            "Withdraw Sucessfully";
+        
+
+            document.getElementById("atmbalance").innerHTML =
+            atmbalance="Remaining ATM Machine Balance is:"  + (atmbalance - amount) +
+            " " + " </br>" + ("Last ATM Balance: 100,000/-")
+         
+            
+            document.getElementById("cardlimit").innerHTML =  
+            cardlimit= "Remaining Daily Card Limit is: " +    (cardlimit - amount) +
+            " " + " </br>" + ("Daily Card Limit 25000");
+            
+
+            document.getElementById("accountbalance").innerHTML =  
+            accountbalance= "Remaining Account Balance is: " +    (accountbalance - amount) +
+            " " + " </br>" + ("Last Balance: 50000");
+           
+
+            }
+
+            
+            }
+        
+
 
 
 </script>
