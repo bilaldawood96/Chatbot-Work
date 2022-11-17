@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// Array:
+// 1- Also Update Array Value
+// 2- Simple Array
+// 3- ToString
+// 4- Join
+// 5- pop
+// 6- Push                  (Add Value in Array Through Prompt)
+// 7- Shift
+// 8- Unshift
+// 9- Delete
+//10- Concat                (Merge Multiple Array)
+//11- Sort                  (Alphat K Starting K Words/Num Ko Tarteeb Karega.)
+//12- Compare               (Ascending & Descending Order Array Karega)
+//13- Splice                (Add Element) (Index.length, Remove Element, Add Element)
+//14- Slice                 (Create New Array Value)
+//15- For Each Loop         (Square Multiple Array)
+//16- Array from String     (User for making Array in STRING)
+//17- For in                (Get keys Array Access Array Objecy, Shortkeys of Array Normal)
+//18- For of                (Get Value Array)
+//19- Map Array             (Create a New Array)
+//20- Filter Array          (Jo Value Chahe wo askti jsy 10 k andr jo num hai wo ajaye)
+//21- reduce Array          (Value Add Krta Hai,)
+
+
+
+
+
+// let marks_class_12 = [91, 82, 63, 84, false, "Not Present"]
+// console.log(marks_class_12[0])
+// console.log(marks_class_12[1])
+// console.log(marks_class_12[2])
+// console.log(marks_class_12[3])
+// console.log(marks_class_12[4])
+// console.log(marks_class_12[5])
+// console.log(marks_class_12[6]) // Will be undefined because index 6 does not exist
+// console.log("The length of marks_class_12 is", marks_class_12.length)
+// marks_class_12[6] = 89 // Adding a new value to the array
+// marks_class_12[0] = 96 // Changing the value of an array
+// console.log(marks_class_12)
+// console.log(typeof marks_class_12)
+
+
+// Array Methods
+// let num = [1, 2, 3, 34, 4]
+// let b = num.toString() // b is now a string 
+// console.log(b, typeof b)
+// let c = num.join(" and ")
+// console.log(c, typeof c)
+// // let r = num.pop() // pop returns the popped element
+// // console.log(num, r)
+// // let r = num.push(56) // push returns the new array length
+// // console.log(num, r)
+// // let r = num.shift()
+// // console.log(r, num) // Removes an element from the start of the array
+
+
+//==========================================================================================//
+
+//Unshift Methods
+
+
+// let r = num.unshift(78)
+// console.log(r, num)
+// console.log(r)
+
+
+//==========================================================================================//
+
+// Delete Method
+
+// let num = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// let num_more = [11, 12, 13, 14, 15, 16, 17, 18, 19]
+// let num_even_more = [211, 212, 213, 214, 415, 416, 417, 418, 419]
+// console.log(num.length)
+// delete num[0]
+// console.log(num.length)
+
+
+//==========================================================================================//
+
+// Concat Methods//
+
+// let newArray = num.concat(num_more, num_even_more)
+// console.log(newArray)
+// console.log(num, num_more)
+
+//==========================================================================================//
+
+
+// sort method//
+
+// let compare = (a, b)=>{
+//   return b - a
+// }
+
+//==========================================================================================//
+
+//Compare Methods//
+
+// let num = [551, 22, 3, 14, 5, 6, 7, 8, 229]
+// num.sort(compare)
+// num.reverse()
+// console.log(num)
+
+//==========================================================================================//
+
+
+// Splice and Slice
+// let num = [551, 22, 3, 14, 5, 6, 7, 8, 229]
+// // let deletedValues = num.splice(2, 4, 1021, 1022, 1023, 1024, 1025)
+// // console.log(num)
+// // console.log(deletedValues)
+
+
+// // let newNum = num.slice(3)
+// let newNum = num.slice(3, 5)
+// console.log(newNum)
+
+//==========================================================================================//
+
+//Normal Array
+
+// let num = [3, 5, 1, 2, 4]
+
+// // for(let i=0; i<num.length;i++){
+// //   console.log(num[i])
+// // }
+
+//==========================================================================================//
+
+// // ForEach Loop
+
+// num.forEach((element) => {
+//   console.log(element * element)
+// })
+
+//==========================================================================================//
+
+// // Array.from 
+
+// let name = "Harry"
+// let arr = Array.from(name)
+// console.log(arr)
+
+//==========================================================================================//
+
+// // for...of 
+
+// for (let item of num){
+//   console.log(item)
+// }
+
+//==========================================================================================//
+
+// // for...in
+
+// for (let i in num){
+// //   console.log(num[i])
+// }
+
+//==========================================================================================//
+
+// let arr = [45, 23, 21]
+// // Array map method
+// let a = arr.map((value, index, array) => {
+//   // console.log(value, index, array)
+//   return value + index
+// })
+// // console.log(arr)
+
+// // Array filter method
+// let arr2 = [45, 23, 21, 0, 3, 5]
+// let a2 = arr2.filter((a) => {
+//   return a < 10
+// })
+// // console.log(a2, arr2)
+
+// // Array reduce method
+// let arr3 = [1, 2, 3, 5, 2, 1]
+// const reduce_func = (h1, h2) => {
+//   return h1 + h2
+// }
+// let newarr3 = arr3.reduce(reduce_func)
+// console.log(newarr3)
+
+
+
+// / Chapter 5 Practice Set
+// Practice Problem 1
+// let arr = [1, 2, 3, 4, 5, 6, 7, 83]
+// let a = prompt("Enter a number")
+// a = Number.parseInt(a)
+// arr.push(a)
+// console.log(arr)
+
+// Practice Problem 2
+// let arr = [1, 2, 3, 4, 5, 6, 7, 83]
+// let a;
+// do {
+//   a = prompt("Enter a number")
+//   a = Number.parseInt(a)
+//   arr.push(a)
+// } while (a != 0);
+// console.log(arr)
+
+// Practice Problem 3
+// let arr = [1, 2, 30, 4, 50, 6, 7, 83, 670]
+// let n = arr.filter((x)=>{
+//   return x%10 == 0
+// })
+// console.log(n)
+
+// Practice Problem 4
+// let arr = [1, 2, 30, 4, 50, 6, 7, 83, 670]
+// let n = arr.map((x)=>{
+//   return x*x
+// })
+// console.log(n)
+
+// Practice Problem 5
+// let arr = [1, 2, 3, 4, 5]
+// let n = arr.reduce((x1, x2) => {
+//   return x1 * x2
+// })
+// console.log(n)
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =============================================================================
+
+
+// Practice No. 1
+// let marks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// for (let index = 0; index < marks.length; index++) {
+//     console.log(marks[index]);
+
+
+// //Practice No. 2
+// let abc = [1, 2, 3  , 4, 5, 6, 7, 8, 9]
+// let cde = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+// let newarry= abc.concat(cde);
+// document.write(newarry)// }
+
+
+
+// // Practice No. 3
+// let abc = [4, 2, 1 , 10, 8 , 13, 11]
+// abc.sort()
+// console.log(abc)
+
+
+// Practice No. 4 //Ascending Order
+
+// let abc = [4, 2, 1 , 10, 8 , 13, 11];
+// let compare = (a, b)=>{
+//     return a-b
+// }
+
+// abc.sort(compare)
+// document.write(abc)
+
+
+// Practice No. 5 //Descending Order
+
+// let abc  = [4, 2, 1 , 10, 8 , 13, 11];
+// let compare = (a, b)=>{
+//     return b-a
+// }
+
+// abc.sort(compare)
+// document.write(abc)
+
+
+
+// // Practice No. 6 //
+
+// let abc = [1,2, 3, 4, 5, 6, 7, 8, 9]
+// // for (let index in abc)
+// for (let index of abc)
+// // console.log(abc[index])
+// console.log(abc[index])
+
+// // Practice No. 7 // Key value
+
+// let abc= {
+// bilal: 90,
+// shzd: 80,
+// saad: 70,
+// shah: 60,
+
+// }
+
+// for (let index in abc)
+// console.log(abc[index]);
+
+// for (let index of abc)
+// console.log(abc[index]);
+
+
+// // Practice No. 8 // Map, Filter, Reduce
+
+// let abc = [2, 4 ,8 , 1, 3, 7, 5, 10]
+// let New = abc.map((value)=>{
+//     return value
+// })
+// document.write(New)
+
+
+// // Practice No. 9 // Add Array Through prompt
+
+// let abc = [1, 2, 3, 4, 5, 6, 7, 8]
+// let def = prompt("Enter a value")
+// abc.push(def)
+// document.write(abc)
+
+
+
+</script>
+
+</body>
+</html>
