@@ -85,9 +85,117 @@
 
 
 ///=====================================================================================
+                     // Fetch// Server Se Data Layega & Promise Show Data resolve & reject
+///=====================================================================================
+
+                        //Get Data From Server As a API//
+
+
+//    fetch('https://jsonplaceholder.typicode.com/todos/1')
+//   .then(response => response.json()) //Convert Data to JSON
+//   .then(data => console.log(data)) // Data Get For True Results
+//   .catch(err => console.log(err)) // Data Nahi Chala To False
+
+
+
+                    //Pass Data One Function to another function//
+
+
+//     function getdata(){
+//     fetch('https://jsonplaceholder.typicode.com/todos/1')
+//    .then(response => response.json())    // convert code to JSON
+//    .then(function(Results){              // Data aya toh yeh function chlyga
+//     // console.log("Results", Results );
+//     example(Results) })                   // Data to another function
+
+
+//     .catch(function(err){                // agar data nhi aya to error ajayega
+//      console.log("err", err);})}
+
+//      getdata()
+
+//   function example(data){
+//   console.log("data", data);}
+
+
+
+
+
+                //Promise Used// Error coding //////////////////////////////////
+
+    // function getdata(){
+    //   let Promise = new Promise(function(resolve, reject){
+    //   fetch('https://jsonplaceholder.typicode.com/todos/1')
+    //  .then(response => response.json())
+    //   .then (function(data){
+    //   resolve(data)
+    //   {}})
+    //  .catch (function(error){
+    //  reject(error); })})}
+
+    //     getdata()
+        
+
+//   function example(data){
+//   console.log("data", data);}
+
+
+
+
+
+
+
+///=====================================================================================
+                        // async = Wait Krlega Thora, Jab Tk Chl Na jae Agay Nahi Jayegi
+                        // Await = jab tk api se data nh ajaye agli line js ki nh chlygi
+///=====================================================================================
+   
+
+ 
+
+///=====================================================================================
                                 // Classes//
 ///=====================================================================================
 
+//constructor Normal Javascript Function//
+
+// function students (name, email){
+// this.name = name;
+// this.email = email}
+// let students1 = new students("Bilal", "bilal@gmail.com")
+// console.log(students1);
+
+
+//constructor class function ES-6//
+
+// class student {
+// constructor(name, email){
+// this.name = name;
+// this.email = email}}
+// let students1 = new student("bilal", "bilal@gmail.com")
+// console.log(students1);
+
+//Merge//
+
+// class student {
+// constructor(name, email){
+// this.name = name;
+// this.email = email}}
+// let students1 = new student("bilal", "bilal@gmail.com")
+// console.log(students1);
+
+// class school extends student {
+// constructor(name, email, school){
+// super(name, email)
+// this.school = school}}
+
+// let students2 = new student("bilal", "bilal@gmail.com");
+// console.log(students2);
+
+
+///=====================================================================================
+                                //  //
+///=====================================================================================
 
 
 
