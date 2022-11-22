@@ -142,6 +142,21 @@
 
 
 
+var promise = new Promise(function(resolve, reject){
+var zinger = "Available"
+if (zinger == "Available"){resolve("Han Bhai Khilaya")}
+    else{reject("Nahi Khilaya")}
+
+})
+
+promise.then(function(data){
+console.log("data", data);
+})
+.catch(function(error){
+console.log("error", error);
+})
+
+
 
 
 
