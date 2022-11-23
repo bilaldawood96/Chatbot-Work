@@ -7,8 +7,25 @@
     <title>Bulb On/Off</title>
 </head>
 <body>
+    <center>
+        <img src="on.jpg" class="on" id="onn" alt="">
+    
+        <br>
+        <button onclick="On()">On</button>
+        <button onclick="off()">Off</button>
+    </center>
 
 
+    <style>
+
+        .dark {font-style: italic;}
+        body {background-color: black;}
+        .on {text-align: center;
+            width: 150px;
+            height: 300px;}
+        
+        </style> -->
+        
 <!-- =========================================================================     
 <button onclick="Pak()">Pakistan</button>
 <div id="pic"></div> --> -->
@@ -17,38 +34,28 @@
 <button onclick="Bold(); return false; ">Bold</button>
 
 
-=========================================================================
-<center>
-    <img src="on.jpg" class="on" id="onn" alt="">
 
-    <br>
-    <button onclick="On()">On</button>
-    <button onclick="off()">Off</button>
-</center> -->
+ <style>
 
-<!-- ========================================================================= -->
-
-<style>
-
-/* .dark {font-style: italic;}
+.dark {font-style: italic;}
 body {background-color: black;}
 .on {text-align: center;
     width: 150px;
-    height: 300px;} */
+    height: 300px;}
 
-</style>
+</style> -->
 
-<!-- ========================================================================= -->
+
 
 <script>
 
-    // function On() {
-    //     let abc = document.getElementById("onn");
-    //     abc.src = "on.jpg";}
+    function On() {
+        let abc = document.getElementById("onn");
+        abc.src = "on.jpg";}
 
-    // function off() {
-    //     let abc = document.getElementById("onn");
-    //     abc.src = "off.jpg"; }
+    function off() {
+        let abc = document.getElementById("onn");
+        abc.src = "off.jpg"; }
 
     // function Bold(){
     //     let def = document.getElementById("PPP");
