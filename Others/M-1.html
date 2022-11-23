@@ -7,8 +7,44 @@
     <title>ES-6</title>
 </head>
 <body>
-    
+    <!-- <p id="pakistan""></p>
+    <button onclick="change()"> Setbhai</button> -->
+
+<img src="https://i.ytimg.com/vi/k8m9plRwMgk/maxresdefault.jpg" id="img" class="small" alt="">
+<button onclick="large()">Large</button>
+<button onclick="small()">small</button>
+
+<style>
+    .small {
+        width: 100px;
+        height: 200px;
+    }
+
+    .large {
+        width: 200px;
+        height: 400px;
+    }
+
+
+
+</style>
+
+
 <script>
+
+function large(){
+    let abc = document.getElementById("img");
+    abc.className="small"
+}
+
+function small(){
+    let abc = document.getElementById("img");
+    abc.className="large"
+}
+
+
+
+
 ///=====================================================================================
                              //Object Destraching//
 ///=====================================================================================
@@ -141,22 +177,19 @@
 
 
 
+// var promise = new Promise(function(resolve, reject){
+// var zinger = "Available"
+// if (zinger == "Available"){resolve("Han Bhai Khilaya")}
+//     else{reject("Nahi Khilaya")}
 
-var promise = new Promise(function(resolve, reject){
-var zinger = "Available"
-if (zinger == "Available"){resolve("Han Bhai Khilaya")}
-    else{reject("Nahi Khilaya")}
+// })
 
-})
-
-promise.then(function(data){
-console.log("data", data);
-})
-.catch(function(error){
-console.log("error", error);
-})
-
-
+// promise.then(function(data){
+// console.log("data", data);
+// })
+// .catch(function(error){
+// console.log("error", error);
+// })
 
 
 
@@ -209,11 +242,34 @@ console.log("error", error);
 
 
 ///=====================================================================================
-                                //  //
+                                // Nested Loop  //
 ///=====================================================================================
 
 
+///=====================================================================================
+                                // Onclick //
+///=====================================================================================
 
+
+// function change(){
+//     let abc = document.getElementById("pakistan");
+//     abc.innerHTML= "Aliraza"
+// }
+
+ 
+
+//Image Size Large & Small Project-7 ////////////////////////////////////
+
+function large(){
+    let abc = document.getElementById("img");
+    abc.className="small"
+}
+
+function small(){
+    let abc = document.getElementById("img");
+    abc.className="large"
+    
+}
 
 </script>
 

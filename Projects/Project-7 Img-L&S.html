@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES-6</title>
+</head>
+<body>
+    <h1>Image Size Large & Small</h1>
+    <!-- <p id="pakistan""></p>
+    <button onclick="change()"> Setbhai</button> -->
+
+<img src="https://i.ytimg.com/vi/k8m9plRwMgk/maxresdefault.jpg" id="img" class="small" alt="">
+<button onclick="large()">Large</button>
+<button onclick="small()">small</button>
+
+<style>
+    .small {
+        width: 100px;
+        height: 200px;
+    }
+
+    .large {
+        width: 200px;
+        height: 400px;
+    }
+
+
+</style>
+
+
+<script>
+
+function large(){
+    
+    let abc = document.getElementById("img");
+    abc.className="small"
+
+}
+
+function small(){
+    let abc = document.getElementById("img");
+    abc.className="large"
+}
