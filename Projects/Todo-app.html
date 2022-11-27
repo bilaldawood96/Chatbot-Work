@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+</head>
+<body>
+    <h1>Todo Application</h1>
+    Enter your Name:<input type="text" name="" id="field" required>
+    <button onclick="Add()">Add</button>
+    <button onclick="deleteAll()">Delete All</button>
+    <ul id="main-ul">
+
+
+    </ul>
+
+
+</body>
+
+<script>
+
+let main= document.getElementById("main-ul");
+
+//Create a Add Button//
+function Add() {
+
+let inputvalue = document.getElementById("field")
+let li= document.createElement('li')
+let litext= document.createTextNode(field.value)
+li.appendChild(litext)
+
+//Create a Delete Button//
+
+
+
+let deletebutton = document.createElement("button")
+let deletetext = document.createTextNode("Delete")
+deletebutton.setAttribute("onclick", "deleteitems(this)")
+deletebutton.appendChild(deletetext)
+
+//Create a Edit Button//
+
+let Editbutton = document.createElement("button")
+let Edittext = document.createTextNode("Edit")
+Editbutton.appendChild(Edittext)
+Editbutton.setAttribute("onclick", "edititems(this)")
+
+
+li.appendChild(deletebutton)
+li.appendChild(Editbutton)
+main.appendChild(li)
+
+inputvalue.value = ""}
+
+
+function deleteitems(e){
+
+    e.parentNode.remove()
+
+}
+
+function deleteAll() {
+    main.innerHTML = ""
+}
+
+
+function edititems(g) {
+  let pak = prompt("Enter updated value",g.parentNode.firstChild.nodeValue)
+  g.parentNode.firstChild.nodeValue = pak;
+}
+
+
+
+
+
+
+</script>
+</html>

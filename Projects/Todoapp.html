@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter Your Name: <input type="text" id="maininput" checked>
+<button onclick="Add()">Add</button>
+<button onclick="deleteall()">DeleteAll</button>
+<ul id="mainul"></ul>
+
+</body>
+
+<script>
+
+let ul = document.getElementById("mainul");
+
+//Add a Value
+
+function Add() {
+
+
+
+let Adding= document.getElementById("maininput");
+let li = document.createElement("li")
+let littext= document.createTextNode(maininput.value)
+li.appendChild(littext)
+
+
+
+
+let Editbutton = document.createElement("button");
+let Texteditbutton = document.createTextNode("Editing")
+Editbutton.appendChild(Texteditbutton);;
+Editbutton.setAttribute("onclick", "Editing(this)")
+
+
+let DeleteButton = document.createElement("button");
+let TextedDeletebutton = document.createTextNode("Delete")
+DeleteButton.appendChild(TextedDeletebutton);
+DeleteButton.setAttribute("onclick", "Delete(this)")
+
+li.appendChild(Editbutton);
+li.appendChild(DeleteButton)
+ul.appendChild(li)
+
+
+}
+
+
+function deleteall(){
+
+    mainul.innerHTML = ""
+
+}
+
+
+function Delete(e){
+e.parentNode.remove()
+
+}
+
+function Editing(f){
+
+
+
+let abc = prompt("Value", f.parentNode.firstChild.nodeValue)
+f.parentNode.firstChild.nodeValue = abc;
+}
+
+
+
+</script>
+
+</html>
