@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+Rs <input type="text" id="Rupees">
+<button onclick="currency()">Click</button>
+<h1 id="result"></h1>
 <body>
     <!-- <button onclick="pakistan()" id="pic">You</button>
         <p id="seemore">
@@ -46,6 +50,15 @@
 //     </div>`
 // }
 
+let abc = 25000
+
+function currency(){
+    let def = document.getElementById("Rupees").value;
+    let abc2 = abc - def
+    document.getElementById("result").innerHTML = abc2
+ 
+
+}
 
 
 
